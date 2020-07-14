@@ -11,7 +11,7 @@ public:
 		percentage=0;
 	}	
 	void setPercentage(int _percentage);
-	virtual void Xuat()=0;
+	virtual void Xuat();
 	int getPercentage();
 }
 
@@ -40,7 +40,7 @@ void Openess::Xuat()
 class Coscienctiousness:public Personality
 {
 public:
-	Coscienctiousness():Personality()
+	Coscienctiousness():Personality(){}
 	void Xuat();
 }
 void Coscienctiousness::Xuat()
@@ -54,7 +54,7 @@ void Coscienctiousness::Xuat()
 class Extraversion:public Personality
 {
 public:
-	Extraversion():Personality()
+	Extraversion():Personality(){}
 	void Xuat();
 }
 void Extraversion::Xuat()
@@ -68,7 +68,7 @@ void Extraversion::Xuat()
 class Agreeableness:public Personality
 {
 public:
-	Agreeableness():Personality()
+	Agreeableness():Personality(){}
 	void Xuat();
 }
 void Agreeableness::Xuat()
@@ -82,7 +82,7 @@ void Agreeableness::Xuat()
 class Neuroticism:public Personality
 {
 public:
-	Neuroticism():Personality()
+	Neuroticism():Personality(){}
 	void Xuat();
 }
 void Neuroticism::Xuat()
@@ -106,7 +106,7 @@ public:
 		personality[3]=new Agreeableness;
 		personality[4]=new Neuroticism;
 	}
-	void Nhap(string s)
+	void Nhap(string s);
 	void Xuat();
 }
 void Person::Nhap(string s)
@@ -134,7 +134,7 @@ class  List
 {
 private:
 	int n;
-	Person *list
+	Person *list;
 public:
 	 List()
 	 {
@@ -171,7 +171,7 @@ int main()
 	cin.tie(NULL);
 	ios_base::sync_with_stdio(false);
 	List list;
-	list->Nhap();
-	list->Xuat();
+	list.Nhap();
+	list.Xuat();
 	return 0;
 }
